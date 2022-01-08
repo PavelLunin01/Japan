@@ -1,19 +1,21 @@
 $default: #102746;
 $white: #ffffff;
 $accent: #1b7dff;
-%opensans-400 {
+$dark: rgba(21, 24, 36, 0.4);
+
+%lato-400 {
   font-family: 'Lato',
     sans-serif;
   font-weight: 400;
 }
 
-%opensans-700 {
+%lato-700 {
   font-family: 'Lato',
     sans-serif;
   font-weight: 700;
 }
 
-%opensans-900 {
+%lato-900 {
   font-family: 'Lato',
     sans-serif;
   font-weight: 900;

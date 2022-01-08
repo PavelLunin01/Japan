@@ -73,13 +73,13 @@
 
 .intro {
   min-height: 100vh;
-  padding-top: 260px;
+  padding: 260px 0 222px;
   background: no-repeat center / cover;
 
   &__title {
     max-width: 620px;
     margin-bottom: 22px;
-    @extend %opensans-700;
+    @extend %lato-700;
     font-size: 50px;
     color: $white;
   }
@@ -108,7 +108,7 @@
     border-bottom: 1px solid $white;
     font-size: 18px;
     color: $white;
-    @extend %opensans-700;
+    @extend %lato-700;
   }
 
   &__field::placeholder {
@@ -116,15 +116,15 @@
   }
 
   &__btn {
+    display: inline-block;
     padding: 15px 40px;
     font-size: 24px;
     text-transform: uppercase;
     background: $accent;
     color: $white;
-    @extend %opensans-700;
+    @extend %lato-700;
     outline: transparent;
     transition: background 0.3s;
-    
   }
 
   &__btn:focus {
@@ -139,6 +139,323 @@
     box-shadow: inset 0 7px 4px rgba(0, 0, 0, 0.25);
   }
 }
+
+.benefits {
+
+  margin-bottom: 130px;
+
+  &__wrap {
+    position: relative;
+    max-width: 1260px;
+    margin: 0 auto;
+    box-shadow: 0 2px 20px rgba(21, 24, 36, 0.20);
+    background-color: $white;
+  }
+
+  &__title {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 90px 100px;
+    font-size: 35px;
+    transform: translateY(-99%);
+    @extend %lato-700;
+    background-color: $white;
+  }
+
+  &__cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 55px;
+    padding: 0 100px 100px;
+    
+  }
+
+  &__card {
+    grid-column: span 1;
+  }
+
+  &__card-icon {
+    max-width: 66px;
+    margin-bottom: 36px;
+  }
+
+  &__card-title {
+    margin-bottom: 26px;
+    font-size: 18px;
+    @extend %lato-700;
+  }
+
+  &__card-desc {
+    margin-bottom: 40px;
+  }
+
+  &__card-link {
+    display: inline-block;
+    padding-right: 60px;
+    color: $accent;
+    text-transform: uppercase;
+    background: url(../images/benefits/arrow.svg) no-repeat 95% center;
+    transition: background 0.3s;
+  }
+
+  &__card-link:focus {
+    box-shadow: 0 0 0 2px rgba(14, 111, 238, 0.5);
+  }
+
+  &__card-link:hover {
+    background: url(../images/benefits/arrow.svg) no-repeat 100% center;
+  }
+
+  &__card-link:active {
+    opacity: 0.5;
+  }
+}
+
+.places {
+
+  margin-bottom: 130px;
+  &__caption {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 36px;
+  }
+
+  &__title {
+    margin-right: 15px;
+  }
+
+  &__link {
+    display: inline-block;
+    padding-right: 60px;
+    margin-right: 5px;
+    color: $accent;
+    text-transform: uppercase;
+    background: url(../images/benefits/arrow.svg) no-repeat 95% center;
+    transition: background 0.3s;
+  }
+
+  &__link:focus {
+    box-shadow: 0 0 0 2px rgba(14, 111, 238, 0.5);
+  }
+
+  &__link:hover {
+    background: url(../images/benefits/arrow.svg) no-repeat 100% center;
+  }
+
+  &__link:active {
+    opacity: 0.5;
+  }
+
+  &__cards {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-gap: 10px;
+  }
+  
+  &__card {
+    position: relative;
+    overflow: hidden;
+  }
+
+  &__card::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    background-color: $dark;
+  }
+
+  &__card:hover {
+    .places__card-img{
+      transform: scale(1.05);
+    }
+  }
+
+  &__card-big {
+    grid-column: span 3;
+  }
+
+  &__card-small {
+    grid-column: span 2;
+  }
+
+  &__card-img {
+    width: 100%;
+    object-fit: cover;
+    transition: transform 0.3s;
+  }
+
+  &__card-img--bg {
+    height: 354px;
+  }
+
+  &__card-img--sm {
+    height: 283px;
+  }
+
+  &__card-title {
+    position: absolute;
+    bottom: 30px;
+    left: 30px;
+    font-size: 50px;
+    @extend %lato-900;
+    z-index: 3;
+    color: $white;
+  }
+
+  &__card-link {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 4;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.tours {
+  margin-bottom: 140px;
+
+  &__tour {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 0 108px;
+    margin-bottom: 75px;
+    align-items: center;
+  }
+
+  &__info {
+    padding-left: 45px;
+  }
+
+  &__title {
+    margin-bottom: 85px;
+    font-size: 30px;
+    @extend %lato-700;
+  }
+
+  &__desc {
+    margin-bottom: 60px;
+  }
+
+  &__link {
+    display: inline-block;
+    padding-right: 60px;
+    margin-right: 5px;
+    color: $accent;
+    text-transform: uppercase;
+    background: url(../images/benefits/arrow.svg) no-repeat 95% center;
+    transition: background 0.3s;
+  }
+
+  &__link:focus {
+    box-shadow: 0 0 0 2px rgba(14, 111, 238, 0.5);
+  }
+
+  &__link:hover {
+    background: url(../images/benefits/arrow.svg) no-repeat 100% center;
+  }
+
+  &__link:active {
+    opacity: 0.5;
+  }
+}
+
+.top {
+  margin-bottom: 85px;
+
+  &__title {
+    margin-bottom: 55px;
+  }
+
+  &__cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 55px;
+  }
+
+  &__card {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__card-pic {
+    position: relative;
+    margin-bottom: 45px;
+  }
+
+  &__card-stats {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 100%;
+    padding: 15px 25px;
+    background-color: $dark;
+    font-size: 18px;
+    color: $white;
+    @extend %lato-700;
+  }
+
+  &__card-title {
+    margin: 0 auto 0 0;
+    text-transform: uppercase;
+  }
+
+  &__card-likes {
+    margin-right: 14px;
+    padding-right: 20px;
+    background: url(../images/top/like.svg) no-repeat right;
+  }
+  &__card-comments {
+    padding-right: 23px;
+    background: url(../images/top/comm.svg) no-repeat right;
+  }
+
+  &__card-desc {
+    margin-bottom: 30px;
+    line-height: 1.3;
+  }
+
+  &__card-link {
+    display: inline-block;
+    width: fit-content;
+    padding: 12px 20px;
+    margin: auto 0 0;
+    text-transform: uppercase;
+    background: $accent;
+    color: $white;
+    @extend %lato-700;
+    outline: transparent;
+    transition: background 0.3s;
+  }
+
+  &__card-link:focus {
+    box-shadow: 0 0 0 2px rgba(14, 111, 238, 0.5);
+  }
+
+  &__card-link:hover {
+    background: #0e6fee;
+  }
+
+  &__card-link:active {
+    box-shadow: inset 0 7px 4px rgba(0, 0, 0, 0.25);
+  }
+}
+
+
+
+
+
 
 @import 'media';
 

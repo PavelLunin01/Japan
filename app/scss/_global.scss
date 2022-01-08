@@ -22,3 +22,28 @@ body {
   margin: 0 auto;
   padding: 0 15px;
 }
+
+.wrapper-full {
+  max-width: 1290px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.title {
+  padding-bottom: 10px;
+  position: relative;
+  font-size: 35px;
+  @extend %lato-700;
+
+}
+
+.title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: block;
+  width: 253px;
+  height: 3px;
+  background-color: $accent;
+}
