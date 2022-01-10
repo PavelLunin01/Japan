@@ -30,11 +30,11 @@ body {
 }
 
 .title {
+  margin-bottom: 20px;
   padding-bottom: 10px;
   position: relative;
   font-size: 35px;
   @extend %lato-700;
-
 }
 
 .title::after {

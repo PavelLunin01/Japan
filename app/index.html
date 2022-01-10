@@ -5,9 +5,17 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Japan</title>
+  <meta name="description" content="">
+  <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
+  <link rel="manifest" href="images/favicon/site.webmanifest">
+  <link rel="mask-icon" href="images/favicon/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
   <link href="css/style.min.css" rel="stylesheet">
 </head>
-<body>
+<body class="body">
   
   <header class="header">
     <div class="wrapper">
@@ -19,33 +27,49 @@
         <nav class="header__nav">
           <ul class="header__list">
             <li class="header__item">
-              <a class="header__link" href="#!">
+              <a class="header__link js-scroll" href="#articles">
                 Articles
               </a>
             </li>
             <li class="header__item">
-              <a class="header__link" href="#!">
+              <a class="header__link js-scroll" href="#locations">
                 Locations
               </a>
             </li>
             <li class="header__item">
-              <a class="header__link" href="#!">
+              <a class="header__link js-scroll" href="#videos">
                 Videos
               </a>
             </li>
             <li class="header__item">
-              <a class="header__link" href="#!">
+              <a class="header__link js-scroll" href="#sign-in">
                 Sign in
               </a>
             </li>
           </ul>
+          <button class="header__close">
+            <div class="header__close-line"></div>
+            <div class="header__close-line"></div>
+          </button>
         </nav>
+
+        <ul class="header__burger burger">
+          <li class="burger__item">
+            <span class="burger__line burger__line-first"></span>
+          </li>
+          <li class="burger__item">
+            <span class="burger__line burger__line-second"></span>
+          </li>
+          <li class="burger__item">
+            <span class="burger__line burger__line-third"></span>
+          </li>
+        </ul>
       </div>
     </div>
   </header>
 
   <main class="main">
-    <section class="intro" style="background-image: url(images/intro/bg.jpg);">
+    <section class="intro" id="sign-in" style="background-image: url(images/intro/bg.jpg);">
       <div class="wrapper">
         <h1 class="intro__title">
           Discover Amazing places in Japan
@@ -84,7 +108,7 @@
               Welcome to Odigo!
             </h3>
             <p class="benefits__card-desc">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus maxime molestiae molestias eos.
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam consequuntur voluptate earum fugiat. Reprehenderit eum in maiores, et corporis fugit unde veritatis optio facere consequuntur enim, quibusdam tenetur facilis id.
             </p>
             <a class="benefits__card-link" href="#!">
               Learn more
@@ -98,7 +122,7 @@
               Welcome to Odigo!
             </h3>
             <p class="benefits__card-desc">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus maxime molestiae molestias eos.
+              Lorem ipsum dolor sit amet consectetur adipisicing 
             </p>
             <a class="benefits__card-link" href="#!">
               Learn more
@@ -175,21 +199,22 @@
       </div>
     </section>
 
-    <section class="tours">
+    <section class="tours" id="articles">
       <div class="wrapper-full">
         <h2 class="sr-only"></h2>
 
-        <div class="tours__tour tour">
+        <div class="tours__tour">
           <div class="tours__pic">
             <img src="images/tours/Image.jpg" alt="photo">
           </div>
-          <div class="tours__info">
+          <div class="tours__info  tours__info-revers">
             <h3 class="tours__title">
               Prefecture in Focus: Tottori
             </h3>
             <p class="tours__desc">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur reiciendis, facere ex culpa a doloribus.
               Amet, inventore quam. Quis officiis ut iustoAmet, inventore quam. Quis officiis ut iusto
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur reiciendis, facere ex culpa a doloribus.
             </p>
             <a class="tours__link" href="#!">
               View Prefecture
@@ -197,7 +222,7 @@
           </div>
         </div>
 
-        <div class="tours__tour tour">
+        <div class="tours__tour">
           <div class="tours__info">
             <h3 class="tours__title">
               Prefecture in Focus: Tottori
@@ -217,7 +242,7 @@
       </div>
     </section>
 
-    <section class="top">
+    <section class="top" id="locations">
       <div class="wrapper-full">
         <h2 class="top__title title">
           Discover Amazing places in Japan
@@ -377,12 +402,11 @@
       </div>
     </section>
 
-    <section class="videos">
+    <section class="videos" id="videos">
       <h2 class="sr-only"></h2>
       <div class="videos__wrapper">
         <div class="videos__item"></div>
         <iframe class="videos__iframe" src="https://www.youtube.com/embed/f4sLdhS1JAc" title="YouTube video player"
-          frameborder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           allowfullscreen></iframe>
       </div>
