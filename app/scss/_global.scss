@@ -1,3 +1,9 @@
+body {
+  font: 400 16px/1.2 'Lato',
+  sans-serif;
+  color: $default;
+}
+
 .sr-only {
   position: absolute;
   width: 1px;
@@ -9,4 +15,35 @@
   clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
+}
+
+.wrapper {
+  max-width: 1090px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.wrapper-full {
+  max-width: 1290px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.title {
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  position: relative;
+  font-size: 35px;
+  @extend %lato-700;
+}
+
+.title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: block;
+  width: 253px;
+  height: 3px;
+  background-color: $accent;
 }
